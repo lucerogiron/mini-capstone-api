@@ -9,5 +9,7 @@ Rails.application.routes.draw do
 
   # get "/product4", controller: "products", action: "product4"
 
-  get "/product", controller: "products", action: "product"
+  get "/product" => "products#index"
+
+  get "/product" => "products#show"
 end

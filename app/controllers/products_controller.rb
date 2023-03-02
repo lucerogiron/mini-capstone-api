@@ -1,24 +1,4 @@
 class ProductsController < ApplicationController
-  # def product1
-  #   @product = Product.first
-  #   render template: "products/show"
-  # end
-
-  # def product2
-  #   @product = Product.second
-  #   render template: "products/show"
-  # end
-
-  # def product3
-  #   @product = Product.third
-  #   render template: "products/show"
-  # end
-
-  # def product4
-  #   @product = Product.last
-  #   render template: "products/show"
-  # end
-
   def index
     @products = Product.all
     render :index
@@ -29,8 +9,14 @@ class ProductsController < ApplicationController
     render :show
   end
 
-  # def create
-  #   @product = Product.create
-  # end
-
+  def create
+    @product = Product.create(
+      name: params[:name],
+      price: params[:name],
+      image_url: params[:name],
+      description: params[:name],
+    )
+    @product.save
+    render :show
+  end
 end

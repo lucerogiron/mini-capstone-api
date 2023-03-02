@@ -19,12 +19,12 @@ class ProductsController < ApplicationController
   #   render template: "products/show"
   # end
 
-  # def all_products
-  #   @products = Product.all
-  #   render template: "products/index"
-  # end
+  def index
+    @products = Product.all
+    render template: "products/index"
+  end
 
-  def product
+  def show
     @product = Product.find_by(:id param[id:])
     render template: "products/show"
   end

@@ -33,7 +33,7 @@ class ProductsController < ApplicationController
 
   def destroy
     @product = Product.find_by(id: params[:id])
-    product.destroy
+    @product.delete
     render json: { message: "This is not the product you are looking for" }
   end
 end

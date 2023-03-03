@@ -30,4 +30,10 @@ class ProductsController < ApplicationController
     )
     render :show
   end
+
+  def destroy
+    @product = Product.find_by(id: params[:id])
+    product.destroy
+    render json {message: "This is not the product you are looking for"}
+  end
 end

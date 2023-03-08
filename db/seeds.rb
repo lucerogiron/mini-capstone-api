@@ -1,6 +1,9 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
+Supplier.create(name: "Dice Inc", email: "sjgdkh@example.com", phone_number: "1234567890")
+Supplier.create(name: "D&D Customs", email: "sgdkuahK@example.com", phone_number: "8314567654")
+Supplier.create(name: "MiniForge", email: "shdhkahw@example.com", phone_number: "2098764563")
 
 product = Product.new(name: "Dice box", price: 15.99, image_url: "url", description: "Fun storage for all your dice needs, carry your dice wherever you go for those on the spot roll checks!")
 product.save

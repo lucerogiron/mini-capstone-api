@@ -25,7 +25,7 @@ class Product < ApplicationRecord
     total = price + tax
   end
 
-  def supplier
-    Supplier.find_by(id: supplier_id)
-  end
+  belongs_to :supplier
+
+  has_many :images
 end

@@ -1,5 +1,6 @@
 class ImagesController < ApplicationController
   def index
-    @image = Ima
+    @image = Image.all
+    render :index
   end
 end

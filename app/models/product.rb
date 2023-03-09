@@ -7,6 +7,9 @@ class Product < ApplicationRecord
   # validates :description, length: { minimun: 10, maximun: 100 }
   # validates :quantity, numerically: { greater_than: 0 }
   # validates :quantity, numerically: true
+  belongs_to :supplier
+
+  has_many :images
 
   def is_discounted?
     if price <= 10
@@ -24,8 +27,4 @@ class Product < ApplicationRecord
   def total
     total = price + tax
   end
-
-  belongs_to :supplier
-
-  has_many :images
 end

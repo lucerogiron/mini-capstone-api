@@ -11,6 +11,8 @@ class Product < ApplicationRecord
 
   has_many :images
 
+  has_many :orders
+
   def is_discounted?
     if price <= 10
       return true

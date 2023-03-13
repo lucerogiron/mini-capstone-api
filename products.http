@@ -32,23 +32,34 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjozLCJleHAiOjE2Mjk5OTI4NjR9.
 Content-Type: application/json
 
 {
-  "email": "khudakh@example.com",
-  "password": "jaluc80",
-  "password_confirmation": "jaluc80"
+  "name": "Hailey",
+  "email": "juiwsgiw@example.com",
+  "password": "Sike100",
+  "password_confirmation": "Sike100"
 }
 
 
 ###
 
 POST http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjozLCJleHAiOjE2Mjk5OTI4NjR9.G2ExsrDYn3oE0vJkvm4T6Po2GbNpH5cqTEaVPVuK_MA
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2Nzg4MTU3NDB9.VkLkRD6Xz_tttS7DkJFz5m4A3wDD5uI1c-Qi9llKYjc
 Content-Type: application/json
 
 {
- "user_id": 1,
- "product_id": 2,
- "quantity": 1,
- "subtotal": 15.00,
- "tax": 0.50,
- "total": 15.50
+ "user_id": 3,
+ "product_id": 3,
+ "quantity": 2,
+ "subtotal": 30.00,
+ "tax": 1.50,
+ "total": 31.50
 }
+
+###
+
+GET http://localhost:3000/orders/1.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg4MTQ4Nzl9.qav4bC3zlr8h5_dLgUKYXwJIT1Vx4dS_Bz-pZde_pEE
+
+###
+
+GET http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2Nzg4MTU3NDB9.VkLkRD6Xz_tttS7DkJFz5m4A3wDD5uI1c-Qi9llKYjc

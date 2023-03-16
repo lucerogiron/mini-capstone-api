@@ -1,21 +1,11 @@
 class Product < ApplicationRecord
-  # validates :name, presence: true
-  # validates :name, uniqueness: true
-  # validates :price, presence: true
-  # validates :price, numerically: { greater_than: 0 }
-  # validates :description, presence: true
-  # validates :description, length: { minimun: 10, maximun: 100 }
-  # validates :quantity, numerically: { greater_than: 0 }
-  # validates :quantity, numerically: true
   belongs_to :supplier
-
   has_many :category_products
-
   has_many :categories, through: :category_product
-
   has_many :images
-
   has_many :orders
+  has_many :carted_products
+  has_many :users, through: :carted_products
 
   def is_discounted?
     if price <= 10
@@ -34,3 +24,12 @@ class Product < ApplicationRecord
     total = price + tax
   end
 end
+
+# validates :name, presence: true
+# validates :name, uniqueness: true
+# validates :price, presence: true
+# validates :price, numerically: { greater_than: 0 }
+# validates :description, presence: true
+# validates :description, length: { minimun: 10, maximun: 100 }
+# validates :quantity, numerically: { greater_than: 0 }
+# validates :quantity, numerically: true

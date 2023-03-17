@@ -32,10 +32,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjozLCJleHAiOjE2Mjk5OTI4NjR9.
 Content-Type: application/json
 
 {
-  "name": "Hailey",
-  "email": "juiwsgiw@example.com",
-  "password": "Sike100",
-  "password_confirmation": "Sike100"
+  "name": "luci",
+  "email": "kauwdkaw@example.com",
+  "password": "Duh",
+  "password_confirmation": "Duh"
 }
 
 
@@ -63,3 +63,28 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg4MTQ4N
 
 GET http://localhost:3000/orders.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2Nzg4MTU3NDB9.VkLkRD6Xz_tttS7DkJFz5m4A3wDD5uI1c-Qi9llKYjc
+
+
+###
+
+POST http://localhost:3000/carted_products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NzkwNzY1OTh9.PXlT_9n8FBqLcea7n6RzJ3lsqRqL_163zAYYBdW8fv0
+Content-Type: application/json
+
+{
+   "user_id": "1",
+    "product_id": "2",
+    "quantity":"2",
+    "status": "carted"
+}
+
+
+###
+
+
+GET http://localhost:3000/carted_products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NzkxNTY3MTl9.dXO0Sw2EAyBHwcBYKna7CYmpNR-jhvoO6uB5wSLq5Ig
+
+###
+
+DELETE http://localhost:3000/carted_products/2.json

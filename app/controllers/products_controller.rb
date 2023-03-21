@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find_by(id: params[:id])
-    @product = Product.find_by(id: params[:categories])
+    # @product = Product.find_by(id: params[:categories])
     render :show
   end
 

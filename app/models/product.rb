@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
   belongs_to :supplier
   has_many :category_products
-  has_many :categories, through: :category_product
+  has_many :categories, through: :category_products
   has_many :images
   has_many :orders
   has_many :carted_products
